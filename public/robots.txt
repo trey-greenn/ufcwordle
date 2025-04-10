@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: www.ufcwordle.com
+
+# Sitemaps
+Sitemap: www.ufcwordle.com/sitemap.xml
