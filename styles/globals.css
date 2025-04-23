@@ -343,3 +343,78 @@ body {
 .instructions p {
   margin-bottom: 0.5rem;
 }
+
+/* Fighter Parameters Styles */
+.fighter-parameters {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.fighter-parameters h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.parameter-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.parameter-box {
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  min-width: 120px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.parameter-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Colors for different parameter boxes */
+.parameter-box.division {
+  background-color: #FF6B6B;
+}
+
+.parameter-box.age {
+  background-color: #4ECDC4;
+}
+
+.parameter-box.wins {
+  background-color: #FFD166;
+}
+
+.parameter-box.losses {
+  background-color: #06D6A0;
+}
+
+.parameter-box.title-reigns {
+  background-color: #118AB2;
+}
+
+.parameter-box.country {
+  background-color: #9B5DE5;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .parameter-boxes {
+    gap: 0.5rem;
+  }
+  
+  .parameter-box {
+    min-width: unset;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}

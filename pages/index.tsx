@@ -199,6 +199,29 @@ export default function Home() {
             </button>
           </div>
         )}
+                <div className="fighter-parameters">
+          <h2>Fighter Parameters</h2>
+          <div className="parameter-boxes">
+            <div className="parameter-box division">
+              <span>Division</span>
+            </div>
+            <div className="parameter-box age">
+              <span>Age</span>
+            </div>
+            <div className="parameter-box wins">
+              <span>Wins</span>
+            </div>
+            <div className="parameter-box losses">
+              <span>Losses</span>
+            </div>
+            <div className="parameter-box title-reigns">
+              <span>Title Reigns</span>
+            </div>
+            <div className="parameter-box country">
+              <span>Country</span>
+            </div>
+          </div>
+        </div>
         
         {!gameState.gameOver ? (
           <>
