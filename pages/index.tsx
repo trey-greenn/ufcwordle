@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import GameHabits from '@/components/GameHabits';
 
 // ... existing code ...
 
@@ -351,10 +352,103 @@ export default function Home() {
         )}
       </main>
 
+      // ... existing code ...
       <footer className="footer">
-        <p>Created by Diz</p>
-        <p>This site is not affiliated with the UFC.</p>
+        <p>This site is not affiliated with Major League Baseball.</p>
       </footer>
+      <GameHabits gameTitle="UFC Wordle" />
+      {/* Blog Section for SEO */}
+           {/* Blog Section for SEO */}
+           <section className="blog-section">
+        <div className="max-w-4xl mx-auto px-4 py-12">
+          <h2 className="text-2xl font-bold mb-6 text-center">UFC Wordle Blog</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Daily Post */}
+            <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <span className="text-xs text-blue-600 dark:text-blue-400 font-semibold">TODAY'S PUZZLE</span>
+              <h3 className="text-xl font-bold mt-2 mb-3">
+                <a href="/blog/todays-ufc-wordle-april-23-2025" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Today's UFC Wordle – April 23, 2025 (Hint & Stats)
+                </a>
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Struggling with today's UFC Wordle? Here's a subtle hint: This champion has dominated the Lightweight division for years. Plus check out today's most common first guesses!
+              </p>
+              <a href="/blog/todays-ufc-wordle-april-23-2025" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">
+                Read more →
+              </a>
+            </article>
+            
+            {/* Evergreen Content */}
+            <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <span className="text-xs text-green-600 dark:text-green-400 font-semibold">STRATEGY GUIDE</span>
+              <h3 className="text-xl font-bold mt-2 mb-3">
+                <a href="/blog/how-to-win-ufc-wordle-every-time" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  How to Win UFC Wordle Every Time: Pro Tips & Strategies
+                </a>
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Master the daily UFC fighter guessing game with our expert strategies. Learn which fighters to guess first, how to use divisions and stats as clues, and win UFC Wordle in fewer guesses!
+              </p>
+              <a href="/blog/how-to-win-ufc-wordle-every-time" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">
+                Read more →
+              </a>
+            </article>
+          </div>
+          
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* More SEO-rich content blocks */}
+            <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-bold mb-2">
+                <a href="/blog/ufc-wordle-vs-traditional-wordle" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  UFC Wordle vs Traditional Wordle: Key Differences Explained
+                </a>
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                How our MMA-themed word game puts a unique spin on the classic formula for UFC fans.
+              </p>
+            </article>
+            
+            <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-bold mb-2">
+                <a href="/blog/most-guessed-fighters-ufc-wordle" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  10 Most Guessed Fighters in UFC Wordle History
+                </a>
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                From Conor McGregor to Khabib Nurmagomedov: See which MMA stars everyone tries first in our daily fighter guessing game.
+              </p>
+            </article>
+            
+            <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-bold mb-2">
+                <a href="/blog/mma-word-games-history" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  The Evolution of UFC and MMA Games Online
+                </a>
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                From fantasy MMA leagues to modern UFC Wordle - explore how the world's fastest growing sport has inspired games and puzzles.
+              </p>
+            </article>
+          </div>
+          
+          {/* Rich SEO footer with long-tail keywords */}
+          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <h4 className="font-medium mb-4 text-gray-700 dark:text-gray-300">Popular UFC Wordle Topics</h4>
+            <div className="flex flex-wrap gap-2 text-sm">
+              <a href="/tags/daily-ufc-puzzle" className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">daily ufc puzzle</a>
+              <a href="/tags/mma-word-game" className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">mma word game</a>
+              <a href="/tags/ufc-wordle" className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">ufc wordle</a>
+              <a href="/tags/guess-the-fighter" className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">guess the fighter</a>
+              <a href="/tags/mma-guessing-game" className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">mma guessing game</a>
+              <a href="/tags/ufc-fighter-quiz" className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">ufc fighter quiz</a>
+              <a href="/tags/fighter-stats-game" className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">fighter stats game</a>
+              <a href="/tags/daily-mma-challenge" className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">daily mma challenge</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

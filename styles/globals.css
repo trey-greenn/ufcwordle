@@ -418,3 +418,345 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* Game Habits Feature Styling */
+
+/* Streak Display */
+.streak-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.current-streak {
+  font-weight: 600;
+  color: #e25822;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stats-button, .leaderboard-button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stats-button:hover, .leaderboard-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.stats-modal, .leaderboard-modal {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.stats-modal h2, .leaderboard-modal h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 12px 4px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Stats Details */
+.stats-details {
+  margin-bottom: 24px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* User Identity (continued) */
+.user-identity {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.user-identity label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.user-identity input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.username-note {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Guess Distribution */
+.guess-distribution {
+  margin-bottom: 24px;
+}
+
+.guess-distribution h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.distribution-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.distribution-row {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.guess-number {
+  width: 24px;
+  text-align: center;
+  font-weight: 600;
+  color: #444;
+}
+
+.distribution-bar {
+  height: 24px;
+  background-color: #6aaa64;
+  border-radius: 4px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  padding-right: 8px;
+  font-weight: 600;
+  transition: width 1s ease;
+}
+
+/* Leaderboard */
+.leaderboard-tabs {
+  display: flex;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-button {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-button.active {
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
+}
+
+.leaderboard-table {
+  margin-bottom: 24px;
+}
+
+.leaderboard-header {
+  display: grid;
+  grid-template-columns: 48px 1fr 80px;
+  padding: 10px 0;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+  color: #555;
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 48px 1fr 80px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.leaderboard-row.is-you {
+  background-color: #f0f7ff;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.rank-col {
+  text-align: center;
+  font-weight: 600;
+}
+
+.player-col {
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.you-badge {
+  font-size: 0.6rem;
+  background-color: #1a73e8;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.value-col {
+  text-align: right;
+  font-weight: 600;
+  padding-right: 8px;
+}
+
+.leaderboard-divider {
+  text-align: center;
+  padding: 8px 0;
+  color: #999;
+}
+
+.leaderboard-footer {
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.leaderboard-footer p {
+  margin-bottom: 4px;
+}
+
+/* Streak Achievement */
+.streak-achievement {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: #fffbef;
+  border: 1px solid #ffe58f;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.achievement-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.achievement-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #d48806;
+  margin-bottom: 8px;
+}
+
+.achievement-cta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Close modal button */
+.close-modal-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close-modal-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .streak-display {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
