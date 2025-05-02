@@ -352,7 +352,6 @@ export default function Home() {
         )}
       </main>
 
-      // ... existing code ...
       <footer className="footer">
         <p>This site is not affiliated with Major League Baseball.</p>
       </footer>
