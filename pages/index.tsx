@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
+import SEO from '../components/SEO';
 import GameHabits from '@/components/GameHabits';
 
 // ... existing code ...
@@ -177,30 +177,39 @@ export default function Home() {
   }
 
   return (
-    <div className="container">
-      <Head>
-        <title>UFC Wordle</title>
-        <meta name="description" content="Guess the UFC fighter" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <><div className="container">
+      <SEO
+        title="UFC Wordle - Guess the Mystery UFC Fighter"
+        description="Dive into the exciting world of UFC with UFC Wordle, the ultimate guessing game for MMA enthusiasts. Test your knowledge of UFC fighters by guessing the mystery fighter in a limited number of tries. Engage in a fun and challenging way to learn more about your favorite UFC stars and their achievements."
+        url="https://www.ufcwordle.com"
+        image="/wordle.png"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://www.ufcwordle.com",
+          "name": "UFC Wordle",
+          "description": "Dive into the exciting world of UFC with UFC Wordle, the ultimate guessing game for MMA enthusiasts.",
+          "image": "https://www.ufcwordle.com/wordle.png"
+        }} />
 
       <main className="main">
         <h1 className="title">UFC Wordle</h1>
-        
+
         {showInstructions && (
           <div className="instructions">
             <p>Guess the mystery UFC fighter in {gameState.maxGuesses} tries or less!</p>
             <p>Green cells indicate a match with the mystery fighter.</p>
             <p>For numeric values, arrows indicate if the mystery fighter's value is higher (↑) or lower (↓).</p>
-            <button 
-              className="newGameButton" 
+            <button
+              className="newGameButton"
               onClick={() => setShowInstructions(false)}
             >
               Got it!
             </button>
           </div>
         )}
-                <div className="fighter-parameters">
+        <div className="fighter-parameters">
           <h2>Fighter Parameters</h2>
           <div className="parameter-boxes">
             <div className="parameter-box division">
@@ -223,7 +232,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         {!gameState.gameOver ? (
           <>
             <div className="gameControls">
@@ -233,13 +242,12 @@ export default function Home() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                   placeholder="Start typing to guess a fighter..."
-                  className="searchInput"
-                />
+                  className="searchInput" />
                 {filteredFighters.length > 0 && (
                   <div className="dropdown">
                     {filteredFighters.map((fighter) => (
-                      <div 
-                        key={fighter.name} 
+                      <div
+                        key={fighter.name}
                         className="dropdownItem"
                         onClick={() => selectFighter(fighter)}
                       >
@@ -250,18 +258,18 @@ export default function Home() {
                 )}
               </div>
               <div className="buttonContainer">
-                <button 
+                <button
                   className="guessButton"
                   onClick={() => {
                     if (filteredFighters.length > 0) {
                       selectFighter(filteredFighters[0]);
                     }
-                  }}
+                  } }
                   disabled={filteredFighters.length === 0}
                 >
                   Guess
                 </button>
-                <button 
+                <button
                   className="giveUpButton"
                   onClick={handleGiveUp}
                   disabled={gameState.guesses.length === 0}
@@ -328,21 +336,21 @@ export default function Home() {
             <h1 className="mysteryPlayerReveal">
               {gameState.mysteryFighter?.name}
             </h1>
-            
+
             {gameState.won ? (
               <p>You got it in {gameState.guesses.length} tries!</p>
             ) : (
               <p>You {gameState.gaveUp ? 'gave up' : 'ran out of guesses'} after {gameState.guesses.length} guesses.</p>
             )}
-            
-            <button 
+
+            <button
               className="shareButton"
               onClick={shareResults}
             >
               Share Results
             </button>
-            
-            <button 
+
+            <button
               className="newGameButton"
               onClick={handleNewGame}
             >
@@ -352,16 +360,14 @@ export default function Home() {
         )}
       </main>
 
-      <footer className="footer">
-        <p>This site is not affiliated with Major League Baseball.</p>
-      </footer>
-      <GameHabits gameTitle="UFC Wordle" />
+
+      {/* <GameHabits gameTitle="UFC Wordle" /> */}
       {/* Blog Section for SEO */}
-           {/* Blog Section for SEO */}
-           <section className="blog-section">
+      {/* Blog Section for SEO */}
+      <section className="blog-section">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <h2 className="text-2xl font-bold mb-6 text-center">UFC Wordle Blog</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Daily Post */}
             <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
@@ -378,7 +384,7 @@ export default function Home() {
                 Read more →
               </a>
             </article>
-            
+
             {/* Evergreen Content */}
             <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
               <span className="text-xs text-green-600 dark:text-green-400 font-semibold">STRATEGY GUIDE</span>
@@ -395,7 +401,7 @@ export default function Home() {
               </a>
             </article>
           </div>
-          
+
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* More SEO-rich content blocks */}
             <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 hover:shadow-md transition-shadow">
@@ -408,7 +414,7 @@ export default function Home() {
                 How our MMA-themed word game puts a unique spin on the classic formula for UFC fans.
               </p>
             </article>
-            
+
             <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 hover:shadow-md transition-shadow">
               <h3 className="text-lg font-bold mb-2">
                 <a href="/blog/most-guessed-fighters-ufc-wordle" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
@@ -419,7 +425,7 @@ export default function Home() {
                 From Conor McGregor to Khabib Nurmagomedov: See which MMA stars everyone tries first in our daily fighter guessing game.
               </p>
             </article>
-            
+
             <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 hover:shadow-md transition-shadow">
               <h3 className="text-lg font-bold mb-2">
                 <a href="/blog/mma-word-games-history" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
@@ -431,7 +437,8 @@ export default function Home() {
               </p>
             </article>
           </div>
-          
+
+
           {/* Rich SEO footer with long-tail keywords */}
           <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
             <h4 className="font-medium mb-4 text-gray-700 dark:text-gray-300">Popular UFC Wordle Topics</h4>
@@ -448,6 +455,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </div><footer className="footer">
+        <p>This site is not affiliated with Major League Baseball.</p>
+      </footer></>
   );
 }
