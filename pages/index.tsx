@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import GameHabits from '@/components/GameHabits';
+import Header from '@/components/Header';
 
 // ... existing code ...
 
@@ -178,6 +179,7 @@ export default function Home() {
 
   return (
     <><div className="container">
+      <Header/>
       <SEO
         title="UFC Wordle - Guess the Mystery UFC Fighter"
         description="Dive into the exciting world of UFC with UFC Wordle, the ultimate guessing game for MMA enthusiasts. Test your knowledge of UFC fighters by guessing the mystery fighter in a limited number of tries. Engage in a fun and challenging way to learn more about your favorite UFC stars and their achievements."
