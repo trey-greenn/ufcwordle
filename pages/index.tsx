@@ -3,7 +3,6 @@ import SEO from '../components/SEO';
 import GameHabits from '@/components/GameHabits';
 import Header from '@/components/Header';
 
-// ... existing code ...
 
 // UFC fighters data from ufcwordle.csv
 const ufcFighters = [
@@ -178,8 +177,8 @@ export default function Home() {
   }
 
   return (
-    <><div className="container">
-      <Header/>
+    <>
+    <Header/>
       <SEO
         title="UFC Wordle - Guess the Mystery UFC Fighter"
         description="Dive into the exciting world of UFC with UFC Wordle, the ultimate guessing game for MMA enthusiasts. Test your knowledge of UFC fighters by guessing the mystery fighter in a limited number of tries. Engage in a fun and challenging way to learn more about your favorite UFC stars and their achievements."
@@ -192,50 +191,45 @@ export default function Home() {
           "url": "https://www.ufcwordle.com",
           "name": "UFC Wordle",
           "description": "Dive into the exciting world of UFC with UFC Wordle, the ultimate guessing game for MMA enthusiasts.",
-          "image": "https://www.ufcwordle.com/wordle.png"
+          "image": "https://www.ufcwordle.com/favicon.ico"
         }} />
+    <div className="container">
 
       <main className="main">
         <h1 className="title">UFC Wordle</h1>
 
-        {showInstructions && (
           <div className="instructions">
             <p>Guess the mystery UFC fighter in {gameState.maxGuesses} tries or less!</p>
             <p>Green cells indicate a match with the mystery fighter.</p>
             <p>For numeric values, arrows indicate if the mystery fighter's value is higher (↑) or lower (↓).</p>
-            <button
-              className="newGameButton"
-              onClick={() => setShowInstructions(false)}
-            >
-              Got it!
-            </button>
+           
           </div>
-        )}
-        <div className="fighter-parameters">
-          <h2>Fighter Parameters</h2>
+        
+        <div className="fighter-parameters ">
+          <h2 className="text-2xl font-bold mb-6 text-center text-white">Fighter Parameters</h2>
           <div className="parameter-boxes">
-            <div className="parameter-box division">
+            <div className="parameter-box division bg-gradient-to-r from-purple-600 to-blue-500 shadow">
               <span>Division</span>
             </div>
-            <div className="parameter-box age">
+            <div className="parameter-box age bg-gradient-to-r from-purple-600 to-blue-500">
               <span>Age</span>
             </div>
-            <div className="parameter-box wins">
+            <div className="parameter-box wins bg-gradient-to-r from-purple-600 to-blue-500">
               <span>Wins</span>
             </div>
-            <div className="parameter-box losses">
+            <div className="parameter-box losses bg-gradient-to-r from-purple-600 to-blue-500">
               <span>Losses</span>
             </div>
-            <div className="parameter-box title-reigns">
+            <div className="parameter-box title-reigns bg-gradient-to-r from-purple-600 to-blue-500">
               <span>Title Reigns</span>
             </div>
-            <div className="parameter-box country">
+            <div className="parameter-box country bg-gradient-to-r from-purple-600 to-blue-500">
               <span>Country</span>
             </div>
           </div>
         </div>
 
-        {!gameState.gameOver ? (
+        {!gameState.gameOver ? (  
           <>
             <div className="gameControls">
               <div className="searchContainer">

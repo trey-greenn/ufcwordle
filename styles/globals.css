@@ -32,7 +32,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -350,12 +349,12 @@ body {
   text-align: center;
 }
 
-.fighter-parameters h2 {
+/* .fighter-parameters h2 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: 600;
   color: #333;
-}
+} */ 
 
 .parameter-boxes {
   display: flex;
@@ -372,7 +371,7 @@ body {
   min-width: 120px;
   color: white;
   font-weight: 600;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(118, 118, 118);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -383,11 +382,11 @@ body {
 
 /* Colors for different parameter boxes */
 .parameter-box.division {
-  background-color: #FF6B6B;
+  background-color:rgb(69, 66, 66);
 }
 
 .parameter-box.age {
-  background-color: #4ECDC4;
+  background-color:rgb(11, 0, 222);
 }
 
 .parameter-box.wins {

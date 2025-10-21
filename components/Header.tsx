@@ -64,10 +64,6 @@ const Header = () => {
                 )}
               </div>
               
-              <Link href="/leaderboard" className="text-white hover:bg-white/10 px-3 py-2 rounded-md">
-                Leaderboard
-              </Link>
-              
               <Link href="/about" className="text-white hover:bg-white/10 px-3 py-2 rounded-md">
                 About
               </Link>
